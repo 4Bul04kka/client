@@ -1,0 +1,30 @@
+.block-header {
+  float: left;
+  margin-right: 24px;
+}
+
+.block-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.block-item {
+  width: 33.333%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.block-item-content {
+  display: inline-block;
+  text-align: center;
+}
+
+.block-item-header {
+  margin-top: 22px;
+}
+
+.block-item-image {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
