@@ -11,23 +11,20 @@ function News_block() {
           <ul className="block-row">
             <li className="block-item">
               <a href="#!">
-                <h2>Header</h2>
                 <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">Short text description</p>
+                <p className="block-item-text">Мы успешно завершили разработку сайта для нашего клиента из сферы здравоохранения.</p>
               </a>
             </li>
             <li className="block-item">
               <a href="#!">
-                <h2>Header</h2>
                 <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">Short text description</p>
+                <p className="block-item-text">Мы успешно завершили разработку сайта для нашего клиента из сферы финансов.</p>
               </a>
             </li>
             <li className="block-item">
               <a href="#!">
-                <h2>Header</h2>
                 <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">Short text description</p>
+                <p className="block-item-text">Наша компания выиграла конкурс на разработку нового корпоративного сайта для крупной компании.</p>
               </a>
             </li>
           </ul>

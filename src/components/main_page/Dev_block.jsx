@@ -11,23 +11,23 @@ function Dev_block() {
           <ul className="block-row">
             <li className="block-item">
               <a href="#!">
-                <h2>Header</h2>
+                <h2>КОРПОРАТИВНЫЙ САЙТ</h2>
                 <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">Short text description</p>
+                <p className="block-item-text">Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов. </p>
               </a>
             </li>
             <li className="block-item">
               <a href="#!">
-                <h2>Header</h2>
+                <h2>ИНТЕРНЕТ МАГАЗИН</h2>
                 <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">Short text description</p>
+                <p className="block-item-text">Разработаем интернет магазин и увеличим продажи. </p>
               </a>
             </li>
             <li className="block-item">
               <a href="#!">
-                <h2>Header</h2>
+                <h2>ЛЭНДИНГ </h2>
                 <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">Short text description</p>
+                <p className="block-item-text">Лэндинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.</p>
               </a>
             </li>
           </ul>

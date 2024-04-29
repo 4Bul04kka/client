@@ -6,12 +6,10 @@ function About_us() {
     <div className="body">
       <div className="container">
         <div className="block">
-          <h2 className="block-header">О НАС</h2>
-          <div className="block-text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              commodo, magna in fermentum tincidunt, libero ipsum venenatis
-              odio, vel lacinia nisi nisl eget nibh.
+          <h2 className="about-us-header">О НАС</h2>
+          <div>
+            <p className="about-us-text">
+            Ну типо какой-то осмысленный текст содержащий информацию о достоиствах нашей компании и почему именно её стоит выбрать среди массы конкурентов.
             </p>
           </div>
         </div>

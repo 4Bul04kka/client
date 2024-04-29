@@ -1,13 +1,16 @@
 .footer {
   background-color: #19233C;
   color: #fff;
-  padding: 1rem 0;
+
 }
 
 .container {
+  max-width: 1575px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .footer_text {
@@ -17,4 +20,3 @@
 .footer-logo {
   height: 140px;
 }
-
