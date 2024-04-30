@@ -10,17 +10,17 @@ function Services() {
       </div>
       <div className="container">
         <div className="services-blocks">
-          <Link to="#!" className="services-block-link">
+          <Link to="/corp_site" className="services-block-link">
             <div className="services-block">
               <p className="services-block-text">Text piece 1</p>
             </div>
           </Link>
-          <Link to="#!" className="services-block-link">
+          <Link to="/marketplace" className="services-block-link">
             <div className="services-block">
               <p className="services-block-text">Text piece 2</p>
             </div>
           </Link>
-          <Link to="#!" className="services-block-link">
+          <Link to="/landing" className="services-block-link">
             <div className="services-block">
               <p className="services-block-text">Text piece 3</p>
             </div>

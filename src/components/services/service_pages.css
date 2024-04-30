@@ -1,0 +1,38 @@
+.body {
+    background-color: #3d435d;
+    width: 100%;
+    
+  }
+  .container {
+    max-width: 1575px;
+    padding: 0 75px;
+    margin: 0 auto;
+  }
+  .work_details{
+    color: #fff;
+    text-transform: uppercase;
+    
+  }
+
+  .body h1{
+    margin-left: 33%; /*надо эту херню поменять на нормальное отображение в центре старницы*/
+    margin-bottom: 38px;
+    padding-top: 44px;
+    font-size: 2.75rem;
+    
+  }
+  .body p{
+    margin-bottom: 24px;
+    font-size:  1.5em;
+    text-align: left;
+
+  }
+  .work_examples{
+    color: #fff;
+  }
+  .work_examples p{
+    margin-left: 50%;
+    margin-bottom: 38px;
+    font-size:  1.5em;
+
+  }
