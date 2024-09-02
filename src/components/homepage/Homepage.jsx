@@ -52,7 +52,7 @@ function News_block() {
     <div className="body">
       <div className="container">
         <div className="block">
-          <h2 className="block-header">НАШИ НОВОСТИ</h2>
+          <h2 className="block-header">Новости и мероприятия</h2>
           <ul className="block-row">
             <li className="block-item">
               <a href="#!">
@@ -95,16 +95,26 @@ function Pluses() {
         <div className="block">
           <h2 className="block-header">НАШИ ДОСТОИНСТВА</h2>
           <div className="block-table">
-            <div className="block-table-row">
-              {/* Repeat the following div for each of the three text pieces in the first row */}
-              <div className="block-table-cell">
-                <p className="block-table-text">Text Piece</p>
+            <div className="block-table-column">
+              <div className="block-table-cell1">
+                <p className="block-table-text">Профессионализм</p>
+              </div>
+              <div className="block-table-cell1">
+                <p className="block-table-text">Комплексный подход</p>
+              </div>
+              <div className="block-table-cell1">
+                <p className="block-table-text">Контроль качества</p>
               </div>
             </div>
-            <div className="block-table-row">
-              {/* Repeat the following div for each of the three text pieces in the second row */}
-              <div className="block-table-cell">
-                <p className="block-table-text">Text Piece</p>
+            <div className="block-table-column">
+              <div className="block-table-cell2">
+                <p className="block-table-text">Индивидуальный подход</p>
+              </div>
+              <div className="block-table-cell2">
+                <p className="block-table-text">Баланс предложения</p>
+              </div>
+              <div className="block-table-cell2">
+                <p className="block-table-text">Гарантийные обязательства</p>
               </div>
             </div>
           </div>
@@ -122,9 +132,8 @@ function About_us() {
           <h2 className="about-us-header">О НАС</h2>
           <div>
             <p className="about-us-text">
-              Ну типо какой-то осмысленный текст содержащий информацию о
-              достоиствах нашей компании и почему именно её стоит выбрать среди
-              массы конкурентов.
+            Наша команда профессионалов с богатым опытом работы в индустрии гарантирует высокое качество и инновационные подходы в каждом проекте. 
+            Мы стремимся превзойти ваши ожидания и помочь вам реализовать самые амбициозные идеи.
             </p>
           </div>
         </div>

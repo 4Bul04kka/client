@@ -29,18 +29,18 @@
 .block-item {
   padding: 20px;
   border-radius: 15px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   width: calc(33.333% - 20px);
   text-align: center;
 
   color: #fff;
   background-color: #28264e;
 }
-.block-item h2{
+.block-item h2 {
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 24px;
 }
-
 .block-item a {
   display: block;
   text-decoration: none;
@@ -58,33 +58,40 @@
 .block-text {
   color: #fff;
 }
-.block-table{
+.block-table {
+  max-width: 100%;
+  width: 100%;
 
-  max-width: 1200px;
-  
   height: 275px;
   border-radius: 15px;
-  background: #28264E;
+  background: #28264e;
 
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.block-table-cell1 p {
+  display: inline;
+  padding-left: 50px;
+  padding-right: 800px;
   
 }
-.block-table-text {
-  color: #fff;
-}
-.block-table-cell{
+.block-table-cell2 p {
   display: inline;
+  padding-right: 50px;
+  
 }
-.about-us-header{
-  color:#FFF299 ;
+.about-us-header {
+  color: #fff299;
   margin-bottom: 24px;
   margin-top: 24px;
   font-size: 2rem;
   text-transform: uppercase;
 }
-.about-us-text{
-  color:#FFF299 ;
+.about-us-text {
+  color: #fff299;
   font-size: 1.5rem;
 }

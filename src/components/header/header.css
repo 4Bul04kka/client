@@ -1,75 +1,42 @@
 .header {
-  background-color: #19233c;
+  background-color: #0f1a30;
   color: #fff;
   width: 100%;
-  height: 70px;
+  height: 80px; /* Ensure this matches the Figma model height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem; /* Adds padding to the sides */
 }
 
-.container {
-  max-width: 1575px;
-  padding: 0 75px;
-  margin: 0 auto;
-}
-
-.header-logo {
-  height: 4rem;
-}
-
-.header-button:hover {
-  background-color: #fff;
+.header-logo img {
+  height: 50px; /* Make the logo smaller */
+  margin: 10px 2rem; /* Adds space above and below the logo */
 }
 
 .header-nav-list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 3rem; /* Adjust spacing between nav items */
 }
 
 .header-nav-link {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  height: 100%;
-  padding: 0.6rem 1rem;
-  font-size: 1.5rem; /* You can adjust the font size if needed */
-  align-items: stretch;
+  font-size: 1.8rem; /* Increased font size for nav links */
+  font-weight: 500;
   transition: color 0.3s ease;
 }
-.header-nav li.active{
-  background-color: #41403f;
-}
 
-.header-nav-link:hover {
-  color: #fff299;
+.header-nav-link:hover,
+.header-nav li.active .header-nav-link {
+  color: #ffffff;
+  border-bottom: 2px solid #fff299; /* Underline on hover and active state */
 }
 
 .header-buttons-container {
-  display: flex;
-  align-items: center;
-}
-
-/* Update the header-button class to set a fixed width */
-.header-button {
-  background-color: #fff299;
-  color: #070606;
-  padding: 0.5rem 1rem;
-  margin-top: 0.6rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Add this to make both buttons the same size */
-  font-size: 1.5rem;
-  white-space: nowrap; /* Prevents text from wrapping to the next line */
-  text-align: center;
-}
-
-.header-button:first-child {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for the carved effect */
-}
-
-.header-button:last-child {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for the carved effect */
+  display: none; /* Buttons are no longer needed */
 }
