@@ -8,15 +8,18 @@
   margin: 0 auto;
 }
 .block {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 .block-header {
-  color: #fff;
+  color: #e6e6e6;
   text-transform: uppercase;
 
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   margin-top: 24px;
+  margin-left: 24px;
   font-size: 2rem;
+
+  text-align: left;
 }
 
 .block-row {
@@ -27,7 +30,7 @@
 }
 
 .block-item {
-  padding: 20px;
+  padding: 30px 20px;
   border-radius: 15px;
   font-size: 1.25rem;
   width: calc(33.333% - 20px);
@@ -37,9 +40,9 @@
   background-color: #28264e;
 }
 .block-item h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .block-item a {
   display: block;
@@ -48,19 +51,25 @@
 }
 
 .block-item-image {
-  margin-bottom: 10px;
+  width: 100%; /* Ensure the image takes up full width */
+  height: auto;
+  margin-bottom: 20px; /* Adjusted spacing below the image */
+  border-radius: 10px;
 }
 
 .block-item-text {
-  margin-top: 20px;
+  margin-top: 10px; /* Reduced spacing for a more compact look */
+  font-size: 1.1rem; /* Slightly smaller text for descriptions */
+  line-height: 1.5;
 }
 
 .block-text {
   color: #fff;
 }
 .block-table {
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
+  
 
   height: 275px;
   border-radius: 15px;
@@ -68,21 +77,29 @@
 
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 50px;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+}
+.block-table-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.block-table-cell1 p {
-  display: inline;
-  padding-left: 50px;
-  padding-right: 800px;
+.block-table-cell1 p,
+.block-table-cell2 p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
   
 }
-.block-table-cell2 p {
-  display: inline;
-  padding-right: 50px;
-  
+.block-table-cell1 p:before,
+.block-table-cell2 p:before {
+  content: '•'; /* Added bullet points */
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #e6e6e6; /* Adjusted bullet color for better contrast */
 }
 .about-us-header {
   color: #fff299;

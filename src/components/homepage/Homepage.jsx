@@ -1,6 +1,7 @@
 import React from "react";
 import "./homepage_body.css";
-import temp from "./../../img/homepage_contents/image8.png";
+import { Serv1, Serv2, Serv3
+ } from "./../../img/img_exports";
 
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
@@ -14,7 +15,7 @@ function Dev_block() {
             <li className="block-item">
               <Link to="/corp_site">
                 <h2>КОРПОРАТИВНЫЙ САЙТ</h2>
-                <img src={temp} alt="Image" className="block-item-image" />
+                <img src={Serv1} alt="Image" className="block-item-image" />
                 <p className="block-item-text">
                   Корпоративный сайт положительно скажестся на имидже, выгодно
                   отличит компанию от конкурентов.{" "}
@@ -24,7 +25,7 @@ function Dev_block() {
             <li className="block-item">
               <Link to="/marketplace">
                 <h2>ИНТЕРНЕТ МАГАЗИН</h2>
-                <img src={temp} alt="Image" className="block-item-image" />
+                <img src={Serv2} alt="Image" className="block-item-image" />
                 <p className="block-item-text">
                   Разработаем интернет магазин и увеличим продажи.{" "}
                 </p>
@@ -33,7 +34,7 @@ function Dev_block() {
             <li className="block-item">
               <Link to="/landing">
                 <h2>ЛЭНДИНГ </h2>
-                <img src={temp} alt="Image" className="block-item-image" />
+                <img src={Serv3} alt="Image" className="block-item-image" />
                 <p className="block-item-text">
                   Лэндинг - отличный вариант для продвижения услуг, проведения
                   акций или рекламы нового товара.
@@ -56,31 +57,14 @@ function News_block() {
           <ul className="block-row">
             <li className="block-item">
               <a href="#!">
-                <img src={temp} alt="Image" className="block-item-image" />
+                <img src={Serv1} alt="Image" className="block-item-image" />
                 <p className="block-item-text">
                   Мы успешно завершили разработку сайта для нашего клиента из
                   сферы здравоохранения.
                 </p>
               </a>
             </li>
-            <li className="block-item">
-              <a href="#!">
-                <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">
-                  Мы успешно завершили разработку сайта для нашего клиента из
-                  сферы финансов.
-                </p>
-              </a>
-            </li>
-            <li className="block-item">
-              <a href="#!">
-                <img src={temp} alt="Image" className="block-item-image" />
-                <p className="block-item-text">
-                  Наша компания выиграла конкурс на разработку нового
-                  корпоративного сайта для крупной компании.
-                </p>
-              </a>
-            </li>
+
           </ul>
         </div>
       </div>
