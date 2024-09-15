@@ -14,7 +14,7 @@ function Dev_block() {
           <ul className="block-row">
             <li className="block-item">
               <Link to="/corp_site">
-                <h2>КОРПОРАТИВНЫЙ САЙТ</h2>
+                <h2>КОРПОРАТИВНЫЙ САЙТ </h2>
                 <img src={Serv1} alt="Image" className="block-item-image" />
                 <p className="block-item-text">
                   Корпоративный сайт положительно скажестся на имидже, выгодно
