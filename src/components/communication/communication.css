@@ -1,7 +1,9 @@
+.communication{
+  background-color: #2C3247;
+}
 .contacts-container {
-    background-color: #2C3247; /* Темно-синий фон */
     color: #FFFFFF; /* Белый текст */
-    padding: 40px;
+    padding: 40px 75px;
     max-width: 1575px;
     min-height: 740px;
     margin: 0 auto;

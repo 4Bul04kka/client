@@ -1,4 +1,4 @@
-body{
-    font-family: 'Yanone Kaffeesatz';
+.App {
+  font-family: "Yanone Kaffeesatz";
+  box-sizing: border-box;
 }
-

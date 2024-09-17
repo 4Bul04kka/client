@@ -29,7 +29,7 @@ function Header() {
                 Контакты
               </CustomLink>
               <CustomLink to="/events" className="header-nav-link">
-                Мероприятия
+                Новости
               </CustomLink>
             </ul>
           </nav>

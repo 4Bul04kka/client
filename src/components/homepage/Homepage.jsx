@@ -1,5 +1,5 @@
 import React from "react";
-import "./homepage_body.css";
+import "./homepageBody.css";
 import { Serv1, Serv2, Serv3
  } from "./../../img/img_exports";
 
@@ -56,13 +56,13 @@ function News_block() {
           <h2 className="block-header">Новости и мероприятия</h2>
           <ul className="block-row">
             <li className="block-item">
-              <a href="#!">
+            <Link to="/events">
                 <img src={Serv1} alt="Image" className="block-item-image" />
                 <p className="block-item-text">
                   Мы успешно завершили разработку сайта для нашего клиента из
                   сферы здравоохранения.
                 </p>
-              </a>
+              </Link>
             </li>
 
           </ul>

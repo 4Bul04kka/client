@@ -11,8 +11,8 @@ function Communication() {
         <h3 className="contacts-subtitle">Наш адрес:</h3>
         <p className="contacts-description">
           Lunaris Technologies LLC<br />
-          ул. Программистов, дом 12, офис 45<br />
-          Москва, 115035, Россия
+          ул. Абсолютно Реальная 662 этаж, офис 288<br />
+          Воронеж, 394000, Россия
         </p>
       </div>
 
