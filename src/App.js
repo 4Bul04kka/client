@@ -8,9 +8,9 @@ import About from "./components/pages/about/About";
 import Communication from "./components/pages/communication/Communication";
 import Events from "./components/pages/events/Events";
 
-import Corp_site from "./components/services/Corp_site";
-import Marketplace from "./components/services/Marketplace";
-import Landing from "./components/services/Landing";
+import Corp_site from "./components/pages/services/Corp_site";
+import Marketplace from "./components/pages/services/Marketplace";
+import Landing from "./components/pages/services/Landing";
 
 import { Route, Routes } from "react-router-dom";
 
