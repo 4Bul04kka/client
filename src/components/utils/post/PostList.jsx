@@ -6,9 +6,11 @@ const PostList = ({ posts, title }) => {
     <div>
       <h1 className='events-header'>{title}</h1>
       <div className='posts'>
-        {posts.map((post) => (
-          <PostItem post={post} key={post.id} />
-        ))}
+        {Array.isArray(posts) && posts.length > 0 ? (
+          posts.map((post) => <PostItem post={post} key={post.id} />)
+        ) : (
+          <p>No posts available</p>
+        )}
       </div>
     </div>
   );
