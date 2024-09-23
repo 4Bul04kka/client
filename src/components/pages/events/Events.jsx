@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./events.css";
-import PostItem from "../../utils/post/PostItem";
-import PostList from "../../utils/post/PostList";
+import PostItem from "../../ui/postform/PostItem";
+import PostList from "../../ui/postform/PostList";
 import MyButton from "../../ui/button/MyButton";
 import MyInput from "../../ui/input/MyInput";
 import PostForm from "../../ui/postform/PostForm";
@@ -18,11 +18,19 @@ function Events() {
     setPosts([...posts, newPost]);
   };
 
+  const removePost = (post) => {
+    setPosts(posts.filter((p) => p.id !== post.id));
+  };
+
   return (
     <div className='events'>
       <div className='container'>
         <div>
-          <PostList posts={posts} title={"Новости и мероприятия"} />
+          <PostList
+            remove={removePost}
+            posts={posts}
+            title={"Новости и мероприятия"}
+          />
           <PostForm create={createPost} />
         </div>
       </div>
