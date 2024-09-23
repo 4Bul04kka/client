@@ -8,9 +8,9 @@ import About from "./components/pages/about/About";
 import Communication from "./components/pages/communication/Communication";
 import Events from "./components/pages/events/Events";
 
-import Corp_site from "./components/pages/services/Corp_site";
-import Marketplace from "./components/pages/services/Marketplace";
-import Landing from "./components/pages/services/Landing";
+import CorpPage from "./components/pages/services/subServices/CorpPage";
+import Marketplace from "./components/pages/services/subServices/Marketplace";
+import Landing from "./components/pages/services/subServices/Landing";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -25,7 +25,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/communication' element={<Communication />} />
         <Route path='/events' element={<Events />} />
-        <Route path='/corp_site' element={<Corp_site />} />
+        <Route path='/corp_site' element={<CorpPage />} />
         <Route path='/marketplace' element={<Marketplace />} />
         <Route path='/landing' element={<Landing />} />
       </Routes>
