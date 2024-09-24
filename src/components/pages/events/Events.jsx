@@ -12,9 +12,27 @@ import MyModal from "../../ui/modal/MyModal";
 
 function Events() {
   const [posts, setPosts] = useState([
-    { id: 1, title: "1 new", body: "desc" },
-    { id: 2, title: "2 new", body: "desc" },
-    { id: 3, title: "3 new", body: "desc" },
+    {
+      id: 1,
+      title: "1 new",
+      body: "desc",
+      image:
+        "https://sun9-9.userapi.com/impg/cWBDCm7VC_6llk3hkIYH8DdxXNy3Ngb23PwqBQ/PYJ0WUJHIUI.jpg?size=512x512&quality=96&sign=18655f5f5d382eacf3b6398a7a1a558a&type=album",
+    },
+    {
+      id: 2,
+      title: "2 new",
+      body: "desc",
+      image:
+        "https://sun9-9.userapi.com/impg/cWBDCm7VC_6llk3hkIYH8DdxXNy3Ngb23PwqBQ/PYJ0WUJHIUI.jpg?size=512x512&quality=96&sign=18655f5f5d382eacf3b6398a7a1a558a&type=album",
+    },
+    {
+      id: 3,
+      title: "3 new",
+      body: "desc",
+      image:
+        "https://sun9-9.userapi.com/impg/cWBDCm7VC_6llk3hkIYH8DdxXNy3Ngb23PwqBQ/PYJ0WUJHIUI.jpg?size=512x512&quality=96&sign=18655f5f5d382eacf3b6398a7a1a558a&type=album",
+    },
   ]);
 
   const [filter, setFilter] = useState({ sort: "", query: "" });

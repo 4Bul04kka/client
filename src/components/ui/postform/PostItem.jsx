@@ -9,6 +9,7 @@ const PostItem = (props) => {
           <strong>{props.number}</strong>
           <div>{props.post.title}</div>
           <div>{props.post.body}</div>
+          <img src={props.post.image}></img>
           <div className='post__btns'>
             <MyButton onClick={() => props.remove(props.post)}>
               Удалить

@@ -12,7 +12,7 @@ const PostForm = ({ create }) => {
       id: Date.now(),
     };
     create(newPost);
-    setPost({ title: "", body: "" });
+    setPost({ title: "", body: "", image: "" });
   };
 
   return (
@@ -28,6 +28,12 @@ const PostForm = ({ create }) => {
         onChange={(e) => setPost({ ...post, body: e.target.value })}
         type='text'
         placeholder='Содержание новости'
+      />
+      <MyInput
+        value={post.image}
+        onChange={(e) => setPost({ ...post, image: e.target.value })}
+        type='text'
+        placeholder='URL изображения'
       />
       <MyButton onClick={addNewPost}>Создать новость</MyButton>
     </form>
