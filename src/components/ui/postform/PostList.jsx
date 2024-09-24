@@ -16,7 +16,7 @@ const PostList = ({ posts, title, remove }) => {
             />
           ))
         ) : (
-          <p>No posts available</p>
+          <p>Новостей не найдено</p>
         )}
       </div>
     </div>
