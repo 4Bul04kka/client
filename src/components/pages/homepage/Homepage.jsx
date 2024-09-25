@@ -1,45 +1,35 @@
 import React from "react";
 import "./homepageBody.css";
 import { Serv1, Serv2, Serv3 } from "./../../../img/img_exports";
+import ImgBlock from "./ImgBlock";
 
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+const BlockHeader = ({ text }) => <h2 className='block-header'>{text}</h2>;
 
-function Dev_block() {
+function DevBlock() {
   return (
     <div className='body'>
       <div className='container'>
         <div className='block'>
-          <h2 className='block-header'>РАЗРАБОТКА САЙТОВ</h2>
+          <BlockHeader text='РАЗРАБОТКА САЙТОВ' />
           <ul className='block-row'>
-            <li className='block-item'>
-              <Link to='/corp_site'>
-                <h2>КОРПОРАТИВНЫЙ САЙТ </h2>
-                <img src={Serv1} alt='Image' className='block-item-image' />
-                <p className='block-item-text'>
-                  Корпоративный сайт положительно скажестся на имидже, выгодно
-                  отличит компанию от конкурентов.{" "}
-                </p>
-              </Link>
-            </li>
-            <li className='block-item'>
-              <Link to='/marketplace'>
-                <h2>ИНТЕРНЕТ МАГАЗИН</h2>
-                <img src={Serv2} alt='Image' className='block-item-image' />
-                <p className='block-item-text'>
-                  Разработаем интернет магазин и увеличим продажи.{" "}
-                </p>
-              </Link>
-            </li>
-            <li className='block-item'>
-              <Link to='/landing'>
-                <h2>ЛЭНДИНГ </h2>
-                <img src={Serv3} alt='Image' className='block-item-image' />
-                <p className='block-item-text'>
-                  Лэндинг - отличный вариант для продвижения услуг, проведения
-                  акций или рекламы нового товара.
-                </p>
-              </Link>
-            </li>
+            <ImgBlock
+              link='/corp_site'
+              title='КОРПОРАТИВНЫЙ САЙТ'
+              imgSrc={Serv1}
+              text='Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов.'
+            />
+            <ImgBlock
+              link='/marketplace'
+              title='ИНТЕРНЕТ МАГАЗИН'
+              imgSrc={Serv2}
+              text='Разработаем интернет магазин и увеличим продажи.'
+            />
+            <ImgBlock
+              link='/landing'
+              title='ЛЭНДИНГ'
+              imgSrc={Serv3}
+              text='Лэндинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
+            />
           </ul>
         </div>
       </div>
@@ -47,22 +37,19 @@ function Dev_block() {
   );
 }
 
-function News_block() {
+function NewsBlock() {
   return (
     <div className='body'>
       <div className='container'>
         <div className='block'>
-          <h2 className='block-header'>Новости и мероприятия</h2>
+          <BlockHeader text='Новости и мероприятия' />
           <ul className='block-row'>
-            <li className='block-item'>
-              <Link to='/events'>
-                <img src={Serv1} alt='Image' className='block-item-image' />
-                <p className='block-item-text'>
-                  Мы успешно завершили разработку сайта для нашего клиента из
-                  сферы здравоохранения.
-                </p>
-              </Link>
-            </li>
+            <ImgBlock
+              link='/events'
+              title='Новость 1'
+              imgSrc={Serv1}
+              text='Мы успешно завершили разработку сайта для нашего клиента из сферы здравоохранения.'
+            />
           </ul>
         </div>
       </div>
@@ -71,33 +58,36 @@ function News_block() {
 }
 
 function Pluses() {
+  const plusesColumn1 = [
+    "Профессионализм",
+    "Комплексный подход",
+    "Контроль качества",
+  ];
+  const plusesColumn2 = [
+    "Индивидуальный подход",
+    "Баланс предложения",
+    "Гарантийные обязательства",
+  ];
+
   return (
     <div className='body'>
       <div className='container'>
         <div className='block'>
-          <h2 className='block-header'>НАШИ ДОСТОИНСТВА</h2>
+          <BlockHeader text='НАШИ ДОСТОИНСТВА' />
           <div className='block-table'>
             <div className='block-table-column'>
-              <div className='block-table-cell1'>
-                <p className='block-table-text'>Профессионализм</p>
-              </div>
-              <div className='block-table-cell1'>
-                <p className='block-table-text'>Комплексный подход</p>
-              </div>
-              <div className='block-table-cell1'>
-                <p className='block-table-text'>Контроль качества</p>
-              </div>
+              {plusesColumn1.map((plus, index) => (
+                <div key={index} className='block-table-cell'>
+                  <p className='block-table-text'>{plus}</p>
+                </div>
+              ))}
             </div>
             <div className='block-table-column'>
-              <div className='block-table-cell2'>
-                <p className='block-table-text'>Индивидуальный подход</p>
-              </div>
-              <div className='block-table-cell2'>
-                <p className='block-table-text'>Баланс предложения</p>
-              </div>
-              <div className='block-table-cell2'>
-                <p className='block-table-text'>Гарантийные обязательства</p>
-              </div>
+              {plusesColumn2.map((plus, index) => (
+                <div key={index} className='block-table-cell'>
+                  <p className='block-table-text'>{plus}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -106,12 +96,12 @@ function Pluses() {
   );
 }
 
-function About_us() {
+function AboutUs() {
   return (
     <div className='body'>
       <div className='container'>
         <div className='block'>
-          <h2 className='about-us-header'>О НАС</h2>
+          <BlockHeader text='О НАС' />
           <div>
             <p className='about-us-text'>
               Наша команда профессионалов с богатым опытом работы в индустрии
@@ -128,12 +118,13 @@ function About_us() {
 
 function Homepage() {
   return (
-    <div className='main_page'>
-      <Dev_block />
-      <News_block />
+    <div className='main-page'>
+      <DevBlock />
+      <NewsBlock />
       <Pluses />
-      <About_us />
+      <AboutUs />
     </div>
   );
 }
+
 export default Homepage;

@@ -1,5 +1,5 @@
 .body {
-  background-color: #2C3247;
+  background-color: #2c3247;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
@@ -14,32 +14,38 @@
 .block-header {
   color: #e6e6e6;
   text-transform: uppercase;
+  text-align: center;
 
   margin-bottom: 16px;
   margin-top: 24px;
   margin-left: 24px;
   font-size: 32px;
-  
-
-  text-align: left;
 }
 
 .block-row {
   display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0 10px;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .block-item {
   padding: 30px 20px;
-  border-radius: 15px;
-  font-size: 16px;
-  width: calc(33.333% - 20px);
+  color: #fff;
+  border-radius: 16px;
+  font-size: 20px;
+  list-style: none;
+  width: 30%;
   text-align: center;
 
-  color: #fff;
-  background-color: #28264e;
+  background: transparent;
+  border: 2px solid #fff299;
+}
+
+.block-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 .block-item h2 {
   font-size: 24px;
@@ -50,13 +56,6 @@
   display: block;
   text-decoration: none;
   color: inherit;
-}
-
-.block-item-image {
-  width: 100%; /* Ensure the image takes up full width */
-  height: auto;
-  margin-bottom: 20px; /* Adjusted spacing below the image */
-  border-radius: 10px;
 }
 
 .block-item-text {
@@ -70,14 +69,15 @@
 .block-table {
   width: 100%;
   max-width: 100%;
-  
 
   height: 275px;
-  border-radius: 15px;
-  background: #28264e;
+  border-radius: 16px;
+  background: transparent;
+  border: 2px solid #fff299;
 
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   padding: 20px 50px;
   color: #fff;
   font-size: 18px;
@@ -93,11 +93,10 @@
   margin: 10px 0;
   display: flex;
   align-items: center;
-  
 }
 .block-table-cell1 p:before,
 .block-table-cell2 p:before {
-  content: '•'; /* Added bullet points */
+  content: "•"; /* Added bullet points */
   margin-right: 10px;
   color: #e6e6e6; /* Adjusted bullet color for better contrast */
 }
@@ -109,6 +108,6 @@
   text-transform: uppercase;
 }
 .about-us-text {
-  color: #fff299;
+  color: #fff;
   font-size: 24px;
 }
