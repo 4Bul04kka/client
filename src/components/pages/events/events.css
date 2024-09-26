@@ -29,5 +29,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%; /* Ensure posts take full width */
-  max-width: 600px; /* Limit the width to keep posts from stretching too much */
+  max-width: 800px; /* Limit the width to keep posts from stretching too much */
+}
+.loading {
+  display: flex;
+  justify-content: center;
 }

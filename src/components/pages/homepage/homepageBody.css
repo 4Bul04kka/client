@@ -100,13 +100,7 @@
   margin-right: 10px;
   color: #e6e6e6; /* Adjusted bullet color for better contrast */
 }
-.about-us-header {
-  color: #fff299;
-  margin-bottom: 24px;
-  margin-top: 24px;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
+
 .about-us-text {
   color: #fff;
   font-size: 24px;
