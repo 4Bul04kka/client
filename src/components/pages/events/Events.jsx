@@ -10,16 +10,23 @@ import { usePosts } from "../../hooks/usePosts";
 import PostService from "../../../API/PostService";
 import Loader from "../../ui/loader/Loader";
 import { useFetching } from "../../hooks/useFetching";
+import { getPageCount, getPageArray } from "../../../utils/pages";
 
 function Events() {
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ sort: "", query: "" });
+  const [totalPages, setTotalPages] = useState(0);
+  const [limit, setLimit] = useState(10);
+  const [page, setPage] = useState(1);
   const [modal, setModal] = useState(false);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
+  let pagesArray = getPageArray(totalPages);
 
   const [fetchPosts, arePostsLoading, postError] = useFetching(async () => {
-    const posts = await PostService.getAll();
-    setPosts(posts);
+    const response = await PostService.getAll(limit, page);
+    setPosts(response.data);
+    const totalCount = response.headers["x-total-count"];
+    setTotalPages(getPageCount(totalCount, limit));
   });
 
   useEffect(() => {
@@ -57,6 +64,9 @@ function Events() {
               title={"Новости и мероприятия"}
             />
           )}
+          {pagesArray.map((p) => (
+            <MyButton>{p}</MyButton>
+          ))}
         </div>
       </div>
     </div>
