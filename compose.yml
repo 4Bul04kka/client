@@ -1,8 +1,7 @@
 services:
   frontend:
     build:
-      context: /
+      context: .
+    container_name: client
     ports:
       - "3000:3000"
-    volumes:
-      - .:/frontend2/frontend
