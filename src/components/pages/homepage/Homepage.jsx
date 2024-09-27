@@ -1,6 +1,6 @@
 import React from "react";
 import "./homepageBody.css";
-import { Serv1, Serv2, Serv3 } from "./../../../img/img_exports";
+import { Serv1, Serv2, Serv3, NewsBlockImg } from "./../../../img/img_exports";
 import ImgBlock from "./../../ui/clickableBlock/ImgBlock";
 
 const BlockHeader = ({ text }) => <h2 className='block-header'>{text}</h2>;
@@ -41,12 +41,12 @@ function NewsBlock() {
   return (
     <div className='body'>
       <div className='container'>
-        <div className='block'>
+        <div>
           <BlockHeader text='Новости и мероприятия' />
           <ImgBlock
             link='/events'
             title='Новость 1'
-            imgSrc={Serv1}
+            imgSrc={NewsBlockImg}
             text='Мы успешно завершили разработку сайта для нашего клиента из сферы здравоохранения.'
           />
         </div>
