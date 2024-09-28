@@ -2,7 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./services.css";
 import ServicesImgBlock from "./../../ui/clickableBlock/ServicesImgBlock";
-import { Serv1, Serv2, Serv3 } from "./../../../img/img_exports";
+import {
+  Serv1,
+  Serv2,
+  Serv3,
+  NewsBlockImg,
+  cs5,
+  la2,
+  mp5,
+} from "./../../../img/img_exports";
 
 function Services() {
   return (
@@ -16,24 +24,24 @@ function Services() {
             <ServicesImgBlock
               link='/corp_site'
               title='КОРПОРАТИВНЫЙ САЙТ'
-              imgSrc={Serv1}
-              text='Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов.'
+              imgSrc={cs5}
+              text='Создадим современный корпоративный сайт, который поможет эффективно представить ваш бизнес в интернете и наладить коммуникацию с клиентами. Ваш сайт будет отражать ценности компании, и способствовать укреплению бренда.'
             />
           </div>
           <div className='services-block'>
             <ServicesImgBlock
               link='/marketplace'
               title='ИНТЕРНЕТ МАГАЗИН'
-              imgSrc={Serv2}
-              text='Разработаем интернет магазин и увеличим продажи.'
+              imgSrc={la2}
+              text='Разработаем удобный и функциональный интернет-магазин с интеграцией всех необходимых платежных и логистических систем. Ваши клиенты смогут легко найти и купить товары, а вы — управлять продажами через интуитивно понятную платформу.'
             />
           </div>
           <div className='services-block'>
             <ServicesImgBlock
               link='/landing'
-              title='ЛЭНДИНГ'
-              imgSrc={Serv3}
-              text='Лэндинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
+              title='ЛЕНДИНГ'
+              imgSrc={mp5}
+              text='Создадим лендинг, который привлекает внимание и побуждает к действию. Мы поможем вам запустить эффективную рекламную кампанию и увеличить количество заявок или продаж с одной страницы.'
             />
           </div>
         </div>

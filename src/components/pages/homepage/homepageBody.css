@@ -9,66 +9,39 @@
 }
 .block {
   margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .block-header {
   color: #e6e6e6;
   text-transform: uppercase;
   text-align: center;
-  display: center;
   margin-bottom: 20px;
   margin-top: 24px;
-  margin-left: 24px;
   font-size: 32px;
 }
+
 .block-row {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
 }
-.block-item {
-  padding: 30px 20px;
-  color: #fff;
-  border-radius: 16px;
-  font-size: 20px;
-  list-style: none;
-  width: 30%;
-  text-align: center;
-  background: transparent;
-  border: 2px solid #fff299;
-}
-.block-item img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.block-item h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.block-item a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.block-item-text {
-  margin-top: 10px;
-  line-height: 1.5;
-}
+
 .block-table {
-  width: 100%;
-  max-width: 100%;
+  width: 80%; /* Reduce width from 100% to center it better */
   height: 275px;
   border-radius: 16px;
   background: transparent;
-  border: 2px solid #fff299;
+  border: 1px solid #fff299;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* This can be changed to 'center' if needed */
   gap: 20px;
   padding: 20px 50px;
   color: #fff;
   font-size: 18px;
+  margin: 0 auto; /* Center the block-table on the page */
 }
 .block-table-column {
   display: flex;
@@ -82,4 +55,16 @@
 .main-page {
   padding: 45px 20px 0px 20px;
   background-color: #2c3247;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsImg {
+  width: 100%;
+  height: auto;
+  border: 1px solid #fff299;
+  border-radius: 16px;
+  margin: 0 auto; /* Ensure image is centered */
 }

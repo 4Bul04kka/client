@@ -1,7 +1,17 @@
 import React from "react";
 import "./homepageBody.css";
-import { Serv1, Serv2, Serv3, NewsBlockImg } from "./../../../img/img_exports";
-import ImgBlock from "./../../ui/clickableBlock/ImgBlock";
+import {
+  Serv1,
+  Serv2,
+  Serv3,
+  NewsBlockImg,
+  cs5,
+  la2,
+  mp5,
+} from "./../../../img/img_exports";
+
+import ImgBlock from "./homepageImgBlock/ImgBlock";
+import { Link } from "react-router-dom";
 
 const BlockHeader = ({ text }) => <h2 className='block-header'>{text}</h2>;
 
@@ -15,20 +25,20 @@ function DevBlock() {
             <ImgBlock
               link='/corp_site'
               title='КОРПОРАТИВНЫЙ САЙТ'
-              imgSrc={Serv1}
+              imgSrc={cs5}
               text='Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов.'
             />
             <ImgBlock
               link='/marketplace'
               title='ИНТЕРНЕТ МАГАЗИН'
-              imgSrc={Serv2}
+              imgSrc={mp5}
               text='Разработаем интернет магазин и увеличим продажи.'
             />
             <ImgBlock
               link='/landing'
-              title='ЛЭНДИНГ'
-              imgSrc={Serv3}
-              text='Лэндинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
+              title='ЛЕНДИНГ'
+              imgSrc={la2}
+              text='Лендинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
             />
           </ul>
         </div>
@@ -41,14 +51,14 @@ function NewsBlock() {
   return (
     <div className='body'>
       <div className='container'>
-        <div>
-          <BlockHeader text='Новости и мероприятия' />
-          <ImgBlock
-            link='/events'
-            title='Новость 1'
-            imgSrc={NewsBlockImg}
-            text='Мы успешно завершили разработку сайта для нашего клиента из сферы здравоохранения.'
-          />
+        <div className='block'>
+          <div className='news'>
+            <BlockHeader text='Новости и мероприятия' />
+
+            <Link to='/events'>
+              <img className='newsImg' src={NewsBlockImg} alt='' />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
