@@ -1,14 +1,6 @@
 import React from "react";
 import "./homepageBody.css";
-import {
-  Serv1,
-  Serv2,
-  Serv3,
-  NewsBlockImg,
-  cs5,
-  la2,
-  mp5,
-} from "./../../../img/img_exports";
+import { NewsBlockImg, cs5, la2, mp5 } from "./../../../img/img_exports";
 
 import ImgBlock from "./homepageImgBlock/ImgBlock";
 import { Link } from "react-router-dom";
@@ -52,9 +44,8 @@ function NewsBlock() {
     <div className='body'>
       <div className='container'>
         <div className='block'>
+          <BlockHeader text='Новости и мероприятия' />
           <div className='news'>
-            <BlockHeader text='Новости и мероприятия' />
-
             <Link to='/events'>
               <img className='newsImg' src={NewsBlockImg} alt='' />
             </Link>
@@ -98,6 +89,9 @@ function Pluses() {
               ))}
             </div>
           </div>
+          <div className='adjust_about'>
+            <AboutUs />
+          </div>
         </div>
       </div>
     </div>
@@ -130,7 +124,6 @@ function Homepage() {
       <DevBlock />
       <NewsBlock />
       <Pluses />
-      <AboutUs />
     </div>
   );
 }
