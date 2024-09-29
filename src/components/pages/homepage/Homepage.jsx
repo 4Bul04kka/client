@@ -9,31 +9,29 @@ const BlockHeader = ({ text }) => <h2 className='block-header'>{text}</h2>;
 
 function DevBlock() {
   return (
-    <div className='body'>
-      <div className='container'>
-        <div className='block'>
-          <BlockHeader text='РАЗРАБОТКА САЙТОВ' />
-          <ul className='block-row'>
-            <ImgBlock
-              link='/corp_site'
-              title='КОРПОРАТИВНЫЙ САЙТ'
-              imgSrc={cs5}
-              text='Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов.'
-            />
-            <ImgBlock
-              link='/marketplace'
-              title='ИНТЕРНЕТ МАГАЗИН'
-              imgSrc={mp5}
-              text='Разработаем интернет магазин и увеличим продажи.'
-            />
-            <ImgBlock
-              link='/landing'
-              title='ЛЕНДИНГ'
-              imgSrc={la2}
-              text='Лендинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
-            />
-          </ul>
-        </div>
+    <div className='container'>
+      <div className='block'>
+        <BlockHeader text='РАЗРАБОТКА САЙТОВ' />
+        <ul className='block-row'>
+          <ImgBlock
+            link='/corp_site'
+            title='КОРПОРАТИВНЫЙ САЙТ'
+            imgSrc={cs5}
+            text='Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов.'
+          />
+          <ImgBlock
+            link='/marketplace'
+            title='ИНТЕРНЕТ МАГАЗИН'
+            imgSrc={mp5}
+            text='Разработаем интернет магазин и увеличим продажи.'
+          />
+          <ImgBlock
+            link='/landing'
+            title='ЛЕНДИНГ'
+            imgSrc={la2}
+            text='Лендинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
+          />
+        </ul>
       </div>
     </div>
   );
@@ -41,15 +39,13 @@ function DevBlock() {
 
 function NewsBlock() {
   return (
-    <div className='body'>
-      <div className='container'>
-        <div className='block'>
-          <BlockHeader text='Новости и мероприятия' />
-          <div className='news'>
-            <Link to='/events'>
-              <img className='newsImg' src={NewsBlockImg} alt='' />
-            </Link>
-          </div>
+    <div className='container'>
+      <div className='block'>
+        <BlockHeader text='Новости и мероприятия' />
+        <div className='news'>
+          <Link to='/events'>
+            <img className='newsImg' src={NewsBlockImg} alt='' />
+          </Link>
         </div>
       </div>
     </div>
@@ -69,29 +65,27 @@ function Pluses() {
   ];
 
   return (
-    <div className='body'>
-      <div className='container'>
-        <div className='block'>
-          <BlockHeader text='НАШИ ДОСТОИНСТВА' />
-          <div className='block-table'>
-            <div className='block-table-column'>
-              {plusesColumn1.map((plus, index) => (
-                <div key={index} className='block-table-cell'>
-                  <p className='block-table-text'>{plus}</p>
-                </div>
-              ))}
-            </div>
-            <div className='block-table-column'>
-              {plusesColumn2.map((plus, index) => (
-                <div key={index} className='block-table-cell'>
-                  <p className='block-table-text'>{plus}</p>
-                </div>
-              ))}
-            </div>
+    <div className='container'>
+      <div className='block'>
+        <BlockHeader text='НАШИ ДОСТОИНСТВА' />
+        <div className='block-table'>
+          <div className='block-table-column'>
+            {plusesColumn1.map((plus, index) => (
+              <div key={index} className='block-table-cell'>
+                <p className='block-table-text'>{plus}</p>
+              </div>
+            ))}
           </div>
-          <div className='adjust_about'>
-            <AboutUs />
+          <div className='block-table-column'>
+            {plusesColumn2.map((plus, index) => (
+              <div key={index} className='block-table-cell'>
+                <p className='block-table-text'>{plus}</p>
+              </div>
+            ))}
           </div>
+        </div>
+        <div className='adjust_about'>
+          <AboutUs />
         </div>
       </div>
     </div>
@@ -100,18 +94,16 @@ function Pluses() {
 
 function AboutUs() {
   return (
-    <div className='body'>
-      <div className='container'>
-        <div className='block'>
-          <BlockHeader text='О НАС' />
-          <div>
-            <p className='about-us-text'>
-              Наша команда профессионалов с богатым опытом работы в индустрии
-              гарантирует высокое качество и инновационные подходы в каждом
-              проекте. Мы стремимся превзойти ваши ожидания и помочь вам
-              реализовать самые амбициозные идеи.
-            </p>
-          </div>
+    <div className='container'>
+      <div className='block'>
+        <BlockHeader text='О НАС' />
+        <div>
+          <p className='about-us-text'>
+            Наша команда профессионалов с богатым опытом работы в индустрии
+            гарантирует высокое качество и инновационные подходы в каждом
+            проекте. Мы стремимся превзойти ваши ожидания и помочь вам
+            реализовать самые амбициозные идеи.
+          </p>
         </div>
       </div>
     </div>
@@ -120,10 +112,18 @@ function AboutUs() {
 
 function Homepage() {
   return (
-    <div className='main-page'>
-      <DevBlock />
-      <NewsBlock />
-      <Pluses />
+    <div className='body'>
+      <div className='container'>
+        <div className='block'>
+          <DevBlock />
+          <div className='block'>
+            <NewsBlock />
+          </div>
+          <div className='block'>
+            <Pluses />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

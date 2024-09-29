@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import logo from "./../../../img/logo.jpg";
+import { logo_footer } from "./../../../img/img_exports";
 
 function Footer() {
   return (
@@ -14,7 +14,7 @@ function Footer() {
           <p>Телефон: +7-800-555-35-35</p>
         </div>
         <div className='footer_logo'>
-          <img src={logo} alt='Logo' className='footer-logo' />
+          <img src={logo_footer} alt='Logo' className='footer-logo' />
         </div>
       </div>
     </footer>

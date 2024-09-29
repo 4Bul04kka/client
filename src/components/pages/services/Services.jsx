@@ -1,16 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./services.css";
-import ServicesImgBlock from "./../../ui/clickableBlock/ServicesImgBlock";
-import {
-  Serv1,
-  Serv2,
-  Serv3,
-  NewsBlockImg,
-  cs5,
-  la2,
-  mp5,
-} from "./../../../img/img_exports";
+import ServicesImgBlock from "./servUi/clickableBlock/ServicesImgBlock";
+import { cs5, la2, mp5 } from "./../../../img/img_exports";
 
 function Services() {
   return (

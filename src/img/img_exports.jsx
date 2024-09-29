@@ -3,6 +3,9 @@ export const Serv2 = require("./homepage_contents/image9.png");
 export const Serv3 = require("./homepage_contents/image8.png");
 export const NewsBlockImg = require("./homepage_contents/i.jpg");
 
+export const logo_header = require("./homepage_contents/logo_hori.jpg");
+export const logo_footer = require("./homepage_contents/logo.jpg");
+
 export const cs1 = require("./services_contents/corp_site/cs1.jpg");
 export const cs2 = require("./services_contents/corp_site/cs2.jpg");
 export const cs3 = require("./services_contents/corp_site/cs3.jpg");
