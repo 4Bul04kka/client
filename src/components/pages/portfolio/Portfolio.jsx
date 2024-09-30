@@ -10,7 +10,7 @@ function Portfolio() {
       </div>
       <div className='container'>
         <div className='portfolio-blocks'>
-          <Link to='#!' className='portfolio-block-link'>
+          <Link to='/portfolio/awards' className='portfolio-block-link'>
             <div className='portfolio-block'>
               <p className='portfolio-block-text'>
                 IT компания Lunaris получила множество наград за свою работу над
@@ -22,7 +22,7 @@ function Portfolio() {
               </p>
             </div>
           </Link>
-          <Link to='#!' className='portfolio-block-link'>
+          <Link to='/portfolio/works' className='portfolio-block-link'>
             <div className='portfolio-block'>
               <p className='portfolio-block-text'>
                 IT компания Lunaris имеет богатый опыт в создании сайтов для

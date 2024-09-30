@@ -33,7 +33,11 @@ function Marketplace() {
           </div>
 
           <WorkExamples pic1={mp1} pic2={mp2} pic3={mp3} pic4={mp4} />
-          <GoogleForm />
+          <GoogleForm
+            link={
+              "https://docs.google.com/forms/d/e/1FAIpQLSe6o_-bR0FA_ozj-lf4OWoxvAmpCLN-zhb556lWRRQHT8Pc-w/viewform?usp=sf_link"
+            }
+          />
         </div>
       </div>
     </section>

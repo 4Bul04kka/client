@@ -14,7 +14,7 @@ function Services() {
         <div className='services-blocks'>
           <div className='services-block'>
             <ServicesImgBlock
-              link='/corp_site'
+              link='/services/corp_site'
               title='КОРПОРАТИВНЫЙ САЙТ'
               imgSrc={cs5}
               text='Создадим современный корпоративный сайт, который поможет эффективно представить ваш бизнес в интернете и наладить коммуникацию с клиентами. Ваш сайт будет отражать ценности компании, и способствовать укреплению бренда.'
@@ -22,7 +22,7 @@ function Services() {
           </div>
           <div className='services-block'>
             <ServicesImgBlock
-              link='/marketplace'
+              link='/services/marketplace'
               title='ИНТЕРНЕТ МАГАЗИН'
               imgSrc={la2}
               text='Разработаем удобный и функциональный интернет-магазин с интеграцией всех необходимых платежных и логистических систем. Ваши клиенты смогут легко найти и купить товары, а вы — управлять продажами через интуитивно понятную платформу.'
@@ -30,7 +30,7 @@ function Services() {
           </div>
           <div className='services-block'>
             <ServicesImgBlock
-              link='/landing'
+              link='/services/landing'
               title='ЛЕНДИНГ'
               imgSrc={mp5}
               text='Создадим лендинг, который привлекает внимание и побуждает к действию. Мы поможем вам запустить эффективную рекламную кампанию и увеличить количество заявок или продаж с одной страницы.'

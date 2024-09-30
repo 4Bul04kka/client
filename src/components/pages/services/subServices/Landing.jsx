@@ -32,7 +32,11 @@ function Landing() {
           </div>
 
           <WorkExamples pic1={la1} pic2={la2} pic3={la3} pic4={la4} />
-          <GoogleForm />
+          <GoogleForm
+            link={
+              "https://docs.google.com/forms/d/e/1FAIpQLSdFepdOgA8ifDTVTFFhoKC3J0w_4oU_RSSN5-NWLZxnDUhd-g/viewform?usp=sf_link"
+            }
+          />
         </div>
       </div>
     </section>

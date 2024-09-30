@@ -9,7 +9,7 @@ function About() {
       </div>
       <div className='container'>
         <div className='about-blocks'>
-          <Link to='#!' className='about-block-link'>
+          <Link to='/about/company' className='about-block-link'>
             <div className='about-block'>
               <p className='about-block-text'>
                 Компания "Lunaris" имеет более чем 20-летний опыт непрерывного
@@ -20,7 +20,7 @@ function About() {
               </p>
             </div>
           </Link>
-          <Link to='#!' className='about-block-link'>
+          <Link to='/about/staff' className='about-block-link'>
             <div className='about-block'>
               <p className='about-block-text'>
                 Сотрудники IT компании Lunaris, специализирующейся на создании

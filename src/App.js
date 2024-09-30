@@ -13,6 +13,11 @@ import Marketplace from "./components/pages/services/subServices/Marketplace";
 import Landing from "./components/pages/services/subServices/Landing";
 
 import { Route, Routes } from "react-router-dom";
+import OurWorks from "./components/pages/portfolio/portfolioPages/OurWorks";
+import OurAwards from "./components/pages/portfolio/portfolioPages/OurAwards";
+
+import Staff from "./components/pages/about/aboutPages/Staff";
+import Company from "./components/pages/about/aboutPages/Company";
 
 function App() {
   return (
@@ -20,14 +25,22 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={[<Homepage />]} />
+
         <Route path='/services' element={<Services />} />
+        <Route path='/services/marketplace' element={<Marketplace />} />
+        <Route path='/services/landing' element={<Landing />} />
+        <Route path='/services/corp_site' element={<CorpPage />} />
+
         <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/portfolio/works' element={<OurWorks />} />
+        <Route path='/portfolio/awards' element={<OurAwards />} />
+
         <Route path='/about' element={<About />} />
+        <Route path='/about/company' element={<Company />} />
+        <Route path='/about/staff' element={<Staff />} />
+
         <Route path='/communication' element={<Communication />} />
         <Route path='/events' element={<Events />} />
-        <Route path='/corp_site' element={<CorpPage />} />
-        <Route path='/marketplace' element={<Marketplace />} />
-        <Route path='/landing' element={<Landing />} />
       </Routes>
       <Footer />
     </div>

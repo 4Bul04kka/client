@@ -14,19 +14,19 @@ function DevBlock() {
         <BlockHeader text='РАЗРАБОТКА САЙТОВ' />
         <ul className='block-row'>
           <ImgBlock
-            link='/corp_site'
+            link='/services/corp_site'
             title='КОРПОРАТИВНЫЙ САЙТ'
             imgSrc={cs5}
             text='Корпоративный сайт положительно скажестся на имидже, выгодно отличит компанию от конкурентов.'
           />
           <ImgBlock
-            link='/marketplace'
+            link='/services/marketplace'
             title='ИНТЕРНЕТ МАГАЗИН'
             imgSrc={mp5}
             text='Разработаем интернет магазин и увеличим продажи.'
           />
           <ImgBlock
-            link='/landing'
+            link='/services/landing'
             title='ЛЕНДИНГ'
             imgSrc={la2}
             text='Лендинг - отличный вариант для продвижения услуг, проведения акций или рекламы нового товара.'
