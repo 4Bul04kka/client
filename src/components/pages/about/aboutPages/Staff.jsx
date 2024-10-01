@@ -14,7 +14,7 @@ import {
 
 function Staff() {
   const employees = [
-    { name: "ДАНИИЛ", role: "Руководитель техпод", image: em1 },
+    { name: "ДАНИИЛ", role: "Backend Developer", image: em1 },
     { name: "ЕГОР", role: "Team Lead PHP", image: em2 },
     {
       name: "ЕКАТЕРИНА",

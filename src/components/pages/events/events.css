@@ -35,3 +35,6 @@
   display: flex;
   justify-content: center;
 }
+.post__btns {
+  display: flex;
+}

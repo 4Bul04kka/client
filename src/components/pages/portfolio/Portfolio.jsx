@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./portfolio.css";
+import ServicesImgBlock from "./../../pages/services/servUi/clickableBlock/ServicesImgBlock";
+import { logo_footer } from "./../../../img/img_exports";
 
 function Portfolio() {
   return (

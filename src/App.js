@@ -18,6 +18,7 @@ import OurAwards from "./components/pages/portfolio/portfolioPages/OurAwards";
 
 import Staff from "./components/pages/about/aboutPages/Staff";
 import Company from "./components/pages/about/aboutPages/Company";
+import PostPage from "./components/pages/postPage/PostPage";
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
         <Route path='/about/staff' element={<Staff />} />
 
         <Route path='/communication' element={<Communication />} />
-        <Route path='/events' element={<Events />} />
+        <Route exact path='/events' element={<Events />} />
+        <Route exact path='/events/:id' element={<PostPage />} />
       </Routes>
       <Footer />
     </div>
