@@ -1,0 +1,18 @@
+.about_block {
+  max-width: 500px;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 15px;
+
+  border: 1px solid #fff299;
+  padding: 20px;
+}
+
+.about_block_text {
+  font-size: 24px;
+  color: #fff;
+}
+
+.about_block_link {
+  text-decoration: none;
+}
