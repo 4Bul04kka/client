@@ -50,3 +50,5 @@ export const we6 = require("./portfolioContents/workExamples/we6.png");
 
 export const lunaris2var = require("./portfolioContents/logo2var.png");
 export const lunarisGroup = require("./portfolioContents/lunarisGroup.png");
+
+export const awards = require("./portfolioContents/awards.jpg");

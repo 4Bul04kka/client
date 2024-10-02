@@ -23,6 +23,8 @@ import PostPage from "./components/pages/postPage/PostPage";
 import { AuthContext } from "./context";
 import { useState } from "react";
 
+import "./styles/common.css";
+
 function App() {
   const [isAuth, setIsAuth] = useState(false);
 

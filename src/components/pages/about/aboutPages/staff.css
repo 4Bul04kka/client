@@ -1,6 +1,7 @@
 .staff {
   background-color: #2c3247;
   padding: 40px 20px 0px 20px;
+  min-height: calc(100vh - 210px);
 }
 .staffContainer {
   max-width: 900px;

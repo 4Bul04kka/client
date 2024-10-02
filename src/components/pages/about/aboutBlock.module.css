@@ -1,11 +1,9 @@
 .about_block {
-  background: #2c3247;
-  max-width: 500px;
+  background: #19233c;
+  max-width: 600px;
   width: 100%;
-  min-height: 250px;
   border-radius: 15px;
 
-  border: 1px solid #fff299;
   padding: 20px;
 }
 

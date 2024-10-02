@@ -29,44 +29,46 @@ const PostPage = () => {
   }, [params.id]);
 
   return (
-    <div className='post-page'>
-      <h1>Страница с новостью ID = {params.id}</h1>
+    <div className='view-post'>
+      <div className='post-page'>
+        <h1>Страница с новостью ID = {params.id}</h1>
 
-      {isLoading ? (
-        <div className='loader-container'>
-          <Loader />
-        </div>
-      ) : (
-        <div className='post-content'>
-          {post.id}. {post.title}. {post.body}
-        </div>
-      )}
+        {isLoading ? (
+          <div className='loader-container'>
+            <Loader />
+          </div>
+        ) : (
+          <div className='post-content'>
+            {post.id}. {post.title}. {post.body}
+          </div>
+        )}
 
-      {postError && <p className='error-message'>Error: {postError}</p>}
+        {postError && <p className='error-message'>Error: {postError}</p>}
 
-      {isImgLoading ? (
-        <div className='loader-container'>
-          <Loader />
-        </div>
-      ) : (
-        <div className='post-images-container'>
-          {images.length > 0 ? (
-            images.map((image, index) => (
-              <img
-                key={index}
-                src={image.url}
-                alt={`Image ${index + 1}`}
-                className='post-image'
-                loading='lazy'
-              />
-            ))
-          ) : (
-            <p>No images available</p>
-          )}
-        </div>
-      )}
+        {isImgLoading ? (
+          <div className='loader-container'>
+            <Loader />
+          </div>
+        ) : (
+          <div className='post-images-container'>
+            {images.length > 0 ? (
+              images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image.url}
+                  alt={`Image ${index + 1}`}
+                  className='post-image'
+                  loading='lazy'
+                />
+              ))
+            ) : (
+              <p>No images available</p>
+            )}
+          </div>
+        )}
 
-      {imgError && <p className='error-message'>Error: {imgError}</p>}
+        {imgError && <p className='error-message'>Error: {imgError}</p>}
+      </div>
     </div>
   );
 };

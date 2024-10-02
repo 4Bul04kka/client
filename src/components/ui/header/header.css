@@ -2,7 +2,6 @@
   background-color: #19233c;
   color: #fff;
   width: 100%;
-  min-height: 80px; /* Ensure this matches the Figma model height */
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -10,18 +10,20 @@ import { usePosts } from "../../hooks/usePosts";
 import PostService from "../../../API/PostService";
 import Loader from "../../ui/loader/Loader";
 import { useFetching } from "../../hooks/useFetching";
-import { getPageCount, getPageArray } from "../../../utils/pages";
+import { getPageCount } from "../../../utils/pages";
 import Pagination from "../../ui/pagination/Pagination";
 import { AuthContext } from "../../../context";
 
 function Events() {
-  const { isAuth, setIsAuth } = useContext(AuthContext);
-  console.log(isAuth);
+  const { isAuth } = useContext(AuthContext);
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ sort: "", query: "" });
   const [totalPages, setTotalPages] = useState(0);
   const [limit, setLimit] = useState(10);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(() => {
+    const savedPage = localStorage.getItem("currentPage");
+    return savedPage ? JSON.parse(savedPage) : 1; // Default to page 1 if no saved page
+  });
   const [modal, setModal] = useState(false);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
@@ -36,7 +38,11 @@ function Events() {
 
   useEffect(() => {
     fetchPosts(limit, page);
-  }, []);
+  }, [limit, page]);
+
+  useEffect(() => {
+    localStorage.setItem("currentPage", JSON.stringify(page)); // Save current page to local storage
+  }, [page]);
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
@@ -47,18 +53,17 @@ function Events() {
     setPosts(posts.filter((p) => p.id !== post.id));
   };
 
-  const changePage = (page) => {
-    setPage(page);
-    fetchPosts(limit, page);
+  const changePage = (newPage) => {
+    setPage(newPage);
+    fetchPosts(limit, newPage);
   };
 
   return (
     <div className='events'>
       <div className='container'>
         <div>
-          {isAuth ? (
+          {isAuth && (
             <div>
-              {" "}
               <MyButton onClick={fetchPosts}>Запросить посты</MyButton>
               <MyButton onClick={() => setModal(true)}>
                 Создать новость
@@ -67,12 +72,10 @@ function Events() {
                 <PostForm create={createPost} />
               </MyModal>
             </div>
-          ) : (
-            <div></div>
           )}
 
           <PostFilter filter={filter} setFilter={setFilter} />
-          {postError && <h1> Произошла ошибка ${postError}</h1>}
+          {postError && <h1>Произошла ошибка {postError}</h1>}
           {arePostsLoading ? (
             <div className='loading'>
               <Loader />
@@ -84,11 +87,13 @@ function Events() {
               title={"Новости и мероприятия"}
             />
           )}
-          <Pagination
-            page={page}
-            changePage={changePage}
-            totalPages={totalPages}
-          />
+          <div className='pag'>
+            <Pagination
+              page={page}
+              changePage={changePage}
+              totalPages={totalPages}
+            />
+          </div>
         </div>
       </div>
     </div>

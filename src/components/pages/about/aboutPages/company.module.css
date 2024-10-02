@@ -4,7 +4,7 @@
   padding: 40px; /* Some padding to create space */
   text-align: center;
   line-height: 1.1;
-  min-height: 740px;
+  min-height: calc(100vh - 210px);
 }
 
 .title {
