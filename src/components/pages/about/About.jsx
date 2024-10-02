@@ -1,6 +1,7 @@
 import React from "react";
 import "./about.css";
 import AboutBlock from "./AboutBlock";
+import { logolunaris2var, lunarisGroup } from "./../../../img/img_exports";
 
 function About() {
   return (

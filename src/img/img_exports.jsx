@@ -47,3 +47,6 @@ export const we3 = require("./portfolioContents/workExamples/we3.png");
 export const we4 = require("./portfolioContents/workExamples/we4.png");
 export const we5 = require("./portfolioContents/workExamples/we5.png");
 export const we6 = require("./portfolioContents/workExamples/we6.png");
+
+export const lunaris2var = require("./portfolioContents/logo2var.png");
+export const lunarisGroup = require("./portfolioContents/lunarisGroup.png");

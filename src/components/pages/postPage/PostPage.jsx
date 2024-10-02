@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import PostService from "../../../API/PostService";
 import { useFetching } from "../../hooks/useFetching";
 import Loader from "../../ui/loader/Loader";
+import "./postPage.css"; // Import the CSS
 
 const PostPage = () => {
   const params = useParams();
   const [post, setPost] = useState({});
-  const [image, setImage] = useState({}); // Set to an object in case response contains multiple image properties
+  const [images, setImages] = useState([]); // Now handling multiple images
 
   // Fetching post by ID
   const [fetchPostById, isLoading, postError] = useFetching(async (id) => {
@@ -15,41 +16,57 @@ const PostPage = () => {
     setPost(response.data);
   });
 
-  // Fetching image by ID (simulated or independent fetch)
-  const [fetchImageById, isImgLoading, imgError] = useFetching(async (id) => {
-    const response = await PostService.getImageById(id); // Get the image by ID
-    setImage(response.data); // Assuming response.data contains an object with the image URL
+  // Fetching multiple images (simulated or via API)
+  const [fetchImagesById, isImgLoading, imgError] = useFetching(async (id) => {
+    const response = await PostService.getImageById(id); // Simulated single image fetch
+    const repeatedImages = Array(4).fill(response.data); // Simulate multiple images (using the same one)
+    setImages(repeatedImages); // Set the repeated images into state
   });
 
   useEffect(() => {
     fetchPostById(params.id); // Fetch the post
-    fetchImageById(params.id); // Fetch a related image, even though this may not match directly
-  }, [params.id]); // Ensure useEffect runs when params.id changes
+    fetchImagesById(params.id); // Fetch multiple images (simulated)
+  }, [params.id]);
 
   return (
-    <div>
+    <div className='post-page'>
       <h1>Страница с новостью ID = {params.id}</h1>
+
       {isLoading ? (
-        <Loader />
+        <div className='loader-container'>
+          <Loader />
+        </div>
       ) : (
-        <div>
+        <div className='post-content'>
           {post.id}. {post.title}. {post.body}
         </div>
       )}
-      {postError && <p>Error: {postError}</p>}
+
+      {postError && <p className='error-message'>Error: {postError}</p>}
 
       {isImgLoading ? (
-        <Loader />
+        <div className='loader-container'>
+          <Loader />
+        </div>
       ) : (
-        <div>
-          {image.url ? (
-            <img src={image.url} alt={post.title} loading='lazy' />
+        <div className='post-images-container'>
+          {images.length > 0 ? (
+            images.map((image, index) => (
+              <img
+                key={index}
+                src={image.url}
+                alt={`Image ${index + 1}`}
+                className='post-image'
+                loading='lazy'
+              />
+            ))
           ) : (
-            <p>No image available</p>
+            <p>No images available</p>
           )}
         </div>
       )}
-      {imgError && <p>Error: {imgError}</p>}
+
+      {imgError && <p className='error-message'>Error: {imgError}</p>}
     </div>
   );
 };

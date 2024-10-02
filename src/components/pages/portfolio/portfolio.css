@@ -12,20 +12,13 @@
 .portfolio-header {
   font-size: 36px;
   color: #fff;
+  margin-bottom: 20px;
 }
-
-.portfolio-block {
-  max-width: 1200px;
-  width: 100%;
-  border-radius: 15px;
-  padding: 20px;
-}
-
-.portfolio-block-text {
-  font-size: 24px;
-  color: #fff;
-}
-
-.portfolio-block-link {
-  text-decoration: none;
+.portfolio-blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  gap: 20px; /* Adds spacing between the blocks */
+  margin-bottom: 40px;
 }
