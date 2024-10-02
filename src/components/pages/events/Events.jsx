@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./events.css";
 import PostList from "../../ui/postform/PostList";
@@ -12,8 +12,11 @@ import Loader from "../../ui/loader/Loader";
 import { useFetching } from "../../hooks/useFetching";
 import { getPageCount, getPageArray } from "../../../utils/pages";
 import Pagination from "../../ui/pagination/Pagination";
+import { AuthContext } from "../../../context";
 
 function Events() {
+  const { isAuth, setIsAuth } = useContext(AuthContext);
+  console.log(isAuth);
   const [posts, setPosts] = useState([]);
   const [filter, setFilter] = useState({ sort: "", query: "" });
   const [totalPages, setTotalPages] = useState(0);
@@ -53,11 +56,21 @@ function Events() {
     <div className='events'>
       <div className='container'>
         <div>
-          <MyButton onClick={fetchPosts}>Запросить посты</MyButton>
-          <MyButton onClick={() => setModal(true)}>Создать новость</MyButton>
-          <MyModal visible={modal} setVisible={setModal}>
-            <PostForm create={createPost} />
-          </MyModal>
+          {isAuth ? (
+            <div>
+              {" "}
+              <MyButton onClick={fetchPosts}>Запросить посты</MyButton>
+              <MyButton onClick={() => setModal(true)}>
+                Создать новость
+              </MyButton>
+              <MyModal visible={modal} setVisible={setModal}>
+                <PostForm create={createPost} />
+              </MyModal>
+            </div>
+          ) : (
+            <div></div>
+          )}
+
           <PostFilter filter={filter} setFilter={setFilter} />
           {postError && <h1> Произошла ошибка ${postError}</h1>}
           {arePostsLoading ? (

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import MyButton from "../../ui/button/MyButton";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../context";
 
 const PostItem = (props) => {
+  const { isAuth, setIsAuth } = useContext(AuthContext);
+
   const navigate = useNavigate();
   return (
     <div className='posts'>
@@ -13,9 +16,17 @@ const PostItem = (props) => {
           <div>{props.post.body}</div>
           <img src={props.post.image}></img>
           <div className='post__btns'>
-            <MyButton onClick={() => props.remove(props.post)}>
-              Удалить
-            </MyButton>
+            {isAuth ? (
+              <div>
+                {" "}
+                <MyButton onClick={() => props.remove(props.post)}>
+                  Удалить
+                </MyButton>
+              </div>
+            ) : (
+              <div></div>
+            )}
+
             <MyButton onClick={() => navigate(`/events/${props.post.id}`)}>
               Открыть
             </MyButton>

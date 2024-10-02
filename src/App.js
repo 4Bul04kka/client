@@ -20,31 +20,38 @@ import Staff from "./components/pages/about/aboutPages/Staff";
 import Company from "./components/pages/about/aboutPages/Company";
 import PostPage from "./components/pages/postPage/PostPage";
 
+import { AuthContext } from "./context";
+import { useState } from "react";
+
 function App() {
+  const [isAuth, setIsAuth] = useState(false);
+
   return (
     <div className='App'>
-      <Header />
-      <Routes>
-        <Route path='/' element={[<Homepage />]} />
+      <AuthContext.Provider value={{ isAuth, setIsAuth }}>
+        <Header />
+        <Routes>
+          <Route path='/' element={[<Homepage />]} />
 
-        <Route path='/services' element={<Services />} />
-        <Route path='/services/marketplace' element={<Marketplace />} />
-        <Route path='/services/landing' element={<Landing />} />
-        <Route path='/services/corp_site' element={<CorpPage />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/services/marketplace' element={<Marketplace />} />
+          <Route path='/services/landing' element={<Landing />} />
+          <Route path='/services/corp_site' element={<CorpPage />} />
 
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/portfolio/works' element={<OurWorks />} />
-        <Route path='/portfolio/awards' element={<OurAwards />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/portfolio/works' element={<OurWorks />} />
+          <Route path='/portfolio/awards' element={<OurAwards />} />
 
-        <Route path='/about' element={<About />} />
-        <Route path='/about/company' element={<Company />} />
-        <Route path='/about/staff' element={<Staff />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/about/company' element={<Company />} />
+          <Route path='/about/staff' element={<Staff />} />
 
-        <Route path='/communication' element={<Communication />} />
-        <Route exact path='/events' element={<Events />} />
-        <Route exact path='/events/:id' element={<PostPage />} />
-      </Routes>
-      <Footer />
+          <Route path='/communication' element={<Communication />} />
+          <Route exact path='/events' element={<Events />} />
+          <Route exact path='/events/:id' element={<PostPage />} />
+        </Routes>
+        <Footer />
+      </AuthContext.Provider>
     </div>
   );
 }
