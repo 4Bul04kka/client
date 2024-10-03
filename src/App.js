@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className='App'>
-      <YandexMetrica id={98539298} />
+      <YandexMetrica id={97091665} />
 
       <AuthContext.Provider value={{ isAuth, setIsAuth }}>
         <Header />
