@@ -12,7 +12,6 @@
   font-size: 36px;
   color: #fff;
   margin-bottom: 40px;
-  /* Center the text within the header */
 }
 .posts {
   display: flex;
@@ -27,8 +26,8 @@
   margin-top: 15px;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure posts take full width */
-  max-width: 1200px; /* Limit the width to keep posts from stretching too much */
+  width: 100%;
+  max-width: 1200px;
 }
 .loading {
   display: flex;

@@ -26,18 +26,18 @@
 }
 
 .block-table {
-  width: 80%; /* Reduce width from 100% to center it better */
+  width: 80%;
   height: 275px;
   border-radius: 16px;
   background: transparent;
   border: 1px solid #fff299;
   display: flex;
-  justify-content: space-between; /* This can be changed to 'center' if needed */
+  justify-content: space-between;
   gap: 20px;
   padding: 20px 50px;
   color: #fff;
   font-size: 24px;
-  margin: 0 auto; /* Center the block-table on the page */
+  margin: 0 auto;
 }
 .block-table-column {
   display: flex;
