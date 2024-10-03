@@ -1,9 +1,16 @@
 import { useEffect } from "react";
 
-/* eslint-disable no-undef */
+export function trackYandexMetricaGoal(id, goal) {
+  if (typeof window.ym !== "undefined") {
+    window.ym(id, "reachGoal", goal);
+  } else {
+    console.warn("Yandex Metrica is not loaded yet.");
+  }
+}
 
 function YandexMetrica({ id }) {
   useEffect(() => {
+    // Load Yandex Metrica script
     (function (m, e, t, r, i, k, a) {
       m[i] =
         m[i] ||
@@ -11,7 +18,7 @@ function YandexMetrica({ id }) {
           (m[i].a = m[i].a || []).push(arguments);
         };
       m[i].l = 1 * new Date();
-      for (var j = 0; j < document.scripts.length; j++) {
+      for (let j = 0; j < document.scripts.length; j++) {
         if (document.scripts[j].src === r) {
           return;
         }
@@ -23,8 +30,9 @@ function YandexMetrica({ id }) {
       a.parentNode.insertBefore(k, a);
     })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    if (typeof ym !== "undefined") {
-      ym(id, "init", {
+    // Initialize Yandex Metrica
+    if (typeof window.ym !== "undefined") {
+      window.ym(id, "init", {
         clickmap: true,
         trackLinks: true,
         accurateTrackBounce: true,
@@ -32,6 +40,7 @@ function YandexMetrica({ id }) {
       });
     }
 
+    // Cleanup script when component unmounts
     return () => {
       const script = document.querySelector(
         `script[src="https://mc.yandex.ru/metrika/tag.js"]`
@@ -42,7 +51,7 @@ function YandexMetrica({ id }) {
     };
   }, [id]);
 
-  return null;
+  return null; // No visible UI component needed
 }
 
 export default YandexMetrica;

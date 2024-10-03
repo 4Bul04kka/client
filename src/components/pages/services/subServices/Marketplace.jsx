@@ -3,8 +3,12 @@ import "./servicePages.css";
 import { mp1, mp2, mp3, mp4 } from "../../../../img/img_exports";
 import GoogleForm from "../servUi/googleForm/GoogleForm";
 import WorkExamples from "../servUi/workExamples/WorkExamples";
+import { trackYandexMetricaGoal } from "../../../../utils/YandexMetrica";
 
 function Marketplace() {
+  const handleFormClick = () => {
+    trackYandexMetricaGoal(97091665, "proceedToCheckout"); // Safely track goal
+  };
   return (
     <section className='work-details'>
       <div className='container'>
@@ -34,7 +38,7 @@ function Marketplace() {
 
           <WorkExamples pic1={mp1} pic2={mp2} pic3={mp3} pic4={mp4} />
           <GoogleForm
-            onClick={window.ym(97091665, "reachGoal", "proceedToCheckout")}
+            onClick={handleFormClick}
             link={
               "https://docs.google.com/forms/d/e/1FAIpQLSe6o_-bR0FA_ozj-lf4OWoxvAmpCLN-zhb556lWRRQHT8Pc-w/viewform?usp=sf_link"
             }

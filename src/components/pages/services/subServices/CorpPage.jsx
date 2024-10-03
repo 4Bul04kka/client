@@ -3,8 +3,12 @@ import "./servicePages.css";
 import { cs1, cs2, cs3, cs4 } from "../../../../img/img_exports";
 import GoogleForm from "../servUi/googleForm/GoogleForm";
 import WorkExamples from "../servUi/workExamples/WorkExamples";
+import { trackYandexMetricaGoal } from "../../../../utils/YandexMetrica";
 
 function CorpPage() {
+  const handleFormClick = () => {
+    trackYandexMetricaGoal(97091665, "proceedToCheckout"); // Safely track goal
+  };
   return (
     <section className='work-details'>
       <div className='container'>
@@ -43,7 +47,7 @@ function CorpPage() {
           <WorkExamples pic1={cs3} pic2={cs2} pic3={cs1} pic4={cs4} />
           <div className='form_button'>
             <GoogleForm
-              onClick={window.ym(97091665, "reachGoal", "proceedToCheckout")}
+              onClick={handleFormClick}
               link={
                 "https://docs.google.com/forms/d/e/1FAIpQLSfbewCabx_rkugiCj-nxorJ8_lq64adJj9yHRyYA2wIVc7HUw/viewform?usp=sf_link"
               }
