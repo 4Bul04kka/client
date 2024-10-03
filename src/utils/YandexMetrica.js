@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 
 export function trackYandexMetricaGoal(id, goal) {
+  // Ensure Yandex Metrica script has loaded and initialized
   if (typeof window.ym !== "undefined") {
     window.ym(id, "reachGoal", goal);
+    console.log(`Goal ${goal} sent to Yandex Metrica`);
   } else {
     console.warn("Yandex Metrica is not loaded yet.");
   }
@@ -10,7 +12,7 @@ export function trackYandexMetricaGoal(id, goal) {
 
 function YandexMetrica({ id }) {
   useEffect(() => {
-    // Load Yandex Metrica script
+    // Load Yandex Metrica script dynamically
     (function (m, e, t, r, i, k, a) {
       m[i] =
         m[i] ||
@@ -30,18 +32,23 @@ function YandexMetrica({ id }) {
       a.parentNode.insertBefore(k, a);
     })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    // Initialize Yandex Metrica
-    if (typeof window.ym !== "undefined") {
-      window.ym(id, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-        webvisor: true,
-      });
-    }
+    // Wait for the script to initialize Yandex Metrica
+    const checkYMInitialized = setInterval(() => {
+      if (typeof window.ym !== "undefined") {
+        window.ym(id, "init", {
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+        });
+        clearInterval(checkYMInitialized);
+        console.log("Yandex Metrica initialized.");
+      }
+    }, 100);
 
     // Cleanup script when component unmounts
     return () => {
+      clearInterval(checkYMInitialized);
       const script = document.querySelector(
         `script[src="https://mc.yandex.ru/metrika/tag.js"]`
       );

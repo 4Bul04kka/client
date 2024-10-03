@@ -4,7 +4,12 @@ import classes from "./googleForm.module.css";
 
 function GoogleForm(props) {
   return (
-    <Link to={props.link} target='_blank' className={classes.googleFormButton}>
+    <Link
+      onClick={props.function}
+      to={props.link}
+      target='_blank'
+      className={classes.googleFormButton}
+    >
       Оставить заявку
     </Link>
   );

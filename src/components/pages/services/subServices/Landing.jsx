@@ -37,7 +37,7 @@ function Landing() {
 
           <WorkExamples pic1={la1} pic2={la2} pic3={la3} pic4={la4} />
           <GoogleForm
-            onClick={handleFormClick}
+            function={handleFormClick}
             link={
               "https://docs.google.com/forms/d/e/1FAIpQLSdFepdOgA8ifDTVTFFhoKC3J0w_4oU_RSSN5-NWLZxnDUhd-g/viewform?usp=sf_link"
             }
