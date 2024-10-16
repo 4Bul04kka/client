@@ -23,18 +23,38 @@
   display: flex;
   padding: 15px;
   border: 2px solid #fff299;
+  border-radius: 16px;
   margin-top: 15px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  cursor: pointer;
 }
 .loading {
   display: flex;
   justify-content: center;
 }
+.post__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.post__body {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 .post__btns {
   display: flex;
+  border-radius: 16px;
+  padding-top: 30px;
+}
+.post__img {
+  min-width: 300px;
+  height: auto;
+  margin: 0px 20px;
+  border: 1px solid #fff299;
+  border-radius: 16px;
 }
 .pag {
   display: flex;

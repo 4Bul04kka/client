@@ -8,6 +8,8 @@ export default class PostService {
         params: {
           _limit: limit,
           _page: page,
+          _sort: "id", // Sort by 'id'
+          _order: "desc", // In descending order
         },
       }
     );
@@ -24,6 +26,14 @@ export default class PostService {
   static async getImageById(id) {
     const response = await axios.get(
       `https://jsonplaceholder.typicode.com/photos/${id}`
+    );
+    return response;
+  }
+
+  static async createPost(postData) {
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/posts",
+      postData
     );
     return response;
   }

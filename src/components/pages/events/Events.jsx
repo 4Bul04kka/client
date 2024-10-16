@@ -44,9 +44,16 @@ function Events() {
     localStorage.setItem("currentPage", JSON.stringify(page)); // Save current page to local storage
   }, [page]);
 
-  const createPost = (newPost) => {
-    setPosts([...posts, newPost]);
-    setModal(false);
+  // Updated createPost to use PostService.createPost
+  const createPost = async (newPost) => {
+    try {
+      const response = await PostService.createPost(newPost);
+      setPage(1);
+      setPosts([response.data, ...posts]);
+      setModal(false);
+    } catch (error) {
+      console.error("Error creating post:", error);
+    }
   };
 
   const removePost = (post) => {
